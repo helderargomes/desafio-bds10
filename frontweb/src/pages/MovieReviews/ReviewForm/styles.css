@@ -1,0 +1,50 @@
+.comment-card {
+  padding: 20px 10px;
+}
+
+.comment-card input {
+  height: 50px;
+}
+
+.invalid-feedback {
+  font-size: 16px;
+}
+
+.comment-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-submit button {
+  width: 280px;
+  font-size: 16px;
+  font-weight: 700;
+  height: 50px;
+}
+
+@media (min-width: 1200px) {
+  .comment-card {
+    padding: 24px 33px 24px 17px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comment-card form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .comment-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comment-card button {
+    width: 334px;
+    font-size: 20px;
+  }
+}

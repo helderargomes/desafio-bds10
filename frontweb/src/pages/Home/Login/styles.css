@@ -1,0 +1,78 @@
+
+.login-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-card h1 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 50px;
+}
+
+
+.alert, .invalid-feedback {
+    font-size: 16px;
+}
+
+.login-card form {
+    width: 100%;
+}
+
+.login-card input {
+    font-size: 16px;
+    height: 47px;
+}
+
+.login-submit button {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+@Media(min-width: 576px) {
+    .login-card {
+        padding: 50px;
+    }
+
+    .login-card form {
+        margin-top: 20px;
+    }
+
+    .login-card h1 {
+        font-size: 48px;
+    }
+}
+
+@Media (min-width: 768px) {
+
+    .login-submit button {
+        height: 65px;
+        align-items: center;
+        margin-top: 75px;
+        margin-bottom: 95px
+    }
+}
+
+@Media (min-width: 1200px) {
+    .login-card {
+        width: 480px;
+        padding: 40px 70px;
+        height: 100%;
+    }
+
+    .alert {
+        font-size: 15px;
+    }
+
+    .invalid-feedback {
+        font-size: 0.4em;
+    }
+}

@@ -1,0 +1,45 @@
+
+.nav-logo-text {
+    color: #000000
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: unset;
+}
+
+.navbar-config {
+    justify-content: space-between;
+    padding: 18px 10px 17px 18px;
+    font-size: 24px;
+    align-items: baseline;
+    
+}
+
+.navbar-config button {
+    background-color: unset;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.navbar-config button a {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+@media (min-width: 576px) {
+    .navbar-config {
+        padding: 18px 25px;
+        
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-config {
+        padding: 20px 40px;
+        
+    }
+}
