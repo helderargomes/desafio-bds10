@@ -1,6 +1,16 @@
-.home-container {
+.movie-page-container {
   padding: 20px 10px;
   font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-filter-container {
+  margin-bottom: 20px;
+}
+
+.movie-pagination-container {
+  margin: 26px, 21px, 34px, 19px;
 }
 
 @media (min-width: 576px) {

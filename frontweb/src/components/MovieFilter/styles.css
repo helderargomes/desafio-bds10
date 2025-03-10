@@ -1,0 +1,31 @@
+.movie-category-filter-container {
+  padding: 5px 20px;
+  color: white;
+}
+
+.movie-category-filter__control {
+  background-color: #6c6c6c !important;
+}
+
+.movie-category-filter__placeholder {
+  font-size: 16px;
+  letter-spacing: -0.015%;
+  color: white !important;
+}
+
+.movie-category-filter__indicator-separator {
+  display: none;
+}
+
+.movie-category-filter__input-container {
+  font-size: 16px;
+  letter-spacing: -0.015%;
+}
+
+.movie-category-filter__menu {
+  background-color: #6c6c6c !important;
+}
+
+.movie-category-filter__single-value {
+  color: white !important;
+}
