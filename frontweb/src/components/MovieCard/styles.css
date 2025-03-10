@@ -33,3 +33,10 @@
 .card-synopsis-container {
     display: none;
 }
+
+@media (min-width: 768px) {
+    .movie-card {
+        margin-bottom: 0;
+        margin: 20px;
+    }
+}
