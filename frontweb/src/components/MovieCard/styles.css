@@ -1,0 +1,35 @@
+.movie-card {
+    padding: 26px 0px;
+    margin-bottom: 20px;
+}
+
+.movie-card-img-container {
+    margin-bottom: 11px;
+}
+
+.movie-card-img-container img {
+    width: 100%;
+}
+
+.card-info-container {
+    padding: 0px 20px 0px 16px;
+}
+
+.card-info-container h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card-info-container h4 {
+    font-size: 16px;
+    color: #FFC700;
+}
+
+.card-info-container p {
+    font-size: 14px;
+    margin-bottom: 27px;
+}
+
+.card-synopsis-container {
+    display: none;
+}
