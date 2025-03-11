@@ -5,21 +5,6 @@ type Props = {
   movie: Movie;
 }
 
-/*const movie: Movie = {
-  id: 6,
-  title: "A Voz do Silêncio",
-  subTitle: "Koe no Katachi",
-  year: 2016,
-  imgUrl:
-    "https://image.tmdb.org/t/p/w533_and_h300_bestv2/5lAMQMWpXMsirvtLLvW7cJgEPkU.jpg",
-  synopsis:
-    'Onde está Gary? Segundo Bob Esponja, Gary foi "caracolstrado" pelo temível Rei Poseidon e levado para a cidade perdida de Atlantic City. Junto a Patrick Estrela, ele sai em uma missão de resgate ao querido amigo, e nesta jornada os dois vão conhecer novos personagens e viver inimagináveis aventuras.',
-  genre: {
-    id: 1,
-    name: "Comédia",
-  },
-};*/
-
 const MovieCard = ( { movie }: Props ) => {
   return (
     <div className="movie-card base-card">

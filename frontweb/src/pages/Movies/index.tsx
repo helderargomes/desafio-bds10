@@ -1,7 +1,7 @@
 import Pagination from "components/Pagination";
 import "./styles.css";
 import MovieCard from "components/MovieCard";
-import MovieCategoryFilter from "components/MovieCategoryFilter";
+import MovieCategoryFilter from "components/MovieGenreFilter";
 import { useEffect, useState } from "react";
 import { SpringPage } from "types/vendor/spring";
 import { Movie } from "types/movie";
@@ -19,7 +19,6 @@ const Movies = () => {
     };
 
     requestBackend(params).then((response) => {
-      console.log(response.data);
       setMovies(response.data);
     });
   }, []);
