@@ -36,7 +36,21 @@
 
 @media (min-width: 768px) {
     .movie-card {
-        margin-bottom: 0;
-        margin: 20px;
+        min-width: 324px;
+        min-height: 364px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .movie-card {
+        min-width: 258px;
+        min-height: 300px;
+        margin-bottom: 50px;
+    
+    }
+
+    .card-info-container p {
+        margin-bottom: 0px;
     }
 }

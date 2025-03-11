@@ -1,7 +1,7 @@
 import Pagination from "components/Pagination";
 import "./styles.css";
 import MovieCard from "components/MovieCard";
-import MovieCategoryFilter from "components/MovieFilter";
+import MovieCategoryFilter from "components/MovieCategoryFilter";
 
 const Movies = () => {
   return (
@@ -10,7 +10,7 @@ const Movies = () => {
           <MovieCategoryFilter />
         </div>
         
-        <div className="row">
+        <div className="row card-list-container">
           <div className="col-sm-6 col-xl-3 movie-card-container">
             <MovieCard />
           </div>

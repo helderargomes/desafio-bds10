@@ -1,16 +1,26 @@
 .movie-category-filter-container {
   padding: 5px 20px;
-  color: white;
+  height: 60px;
+}
+
+.movie-category-filter-select {
+  height: 50px;
+  width: 260px;
 }
 
 .movie-category-filter__control {
   background-color: #6c6c6c !important;
+  height: 50px;
 }
 
 .movie-category-filter__placeholder {
   font-size: 16px;
   letter-spacing: -0.015%;
-  color: white !important;
+  color:#ffffff !important;
+}
+
+.movie-category_filter__indicators {
+  color: #9e9e9e !important;
 }
 
 .movie-category-filter__indicator-separator {
@@ -27,5 +37,12 @@
 }
 
 .movie-category-filter__single-value {
-  color: white !important;
+  color: #ffffff !important;
+}
+
+@media (min-width: 1200px) {
+  .movie-category-filter-container {
+    height: 80px;
+    padding: 15px 20px;
+  }
 }

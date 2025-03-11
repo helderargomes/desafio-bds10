@@ -14,6 +14,7 @@ const MovieCategoryFilter = () => {
       <form className="movie-category-filter-form">
         <div className="movie-category-filter-select">
           <Select options={options}
+          isClearable
           classNamePrefix="movie-category-filter"
           />
         </div>

@@ -14,17 +14,27 @@
 }
 
 @media (min-width: 576px) {
-  .home-container {
+  .movie-page-container {
     padding: 20px;
   }
 
-  .movie-card-container {
-    padding: 0;
+  .movie-pagination-container {
+    margin-bottom: 10px;
   }
 }
 
 @media (min-width: 768px) {
-  .home-container {
+  .movie-page-container {
     padding: 40px;
+  }
+
+  .movie-filter-container {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-pagination-container {
+    margin-bottom: 50px;
   }
 }
