@@ -1,7 +1,11 @@
 import { Movie } from "types/movie";
 import "./styles.css";
 
-const movie: Movie = {
+type Props = {
+  movie: Movie;
+}
+
+/*const movie: Movie = {
   id: 6,
   title: "A Voz do Silêncio",
   subTitle: "Koe no Katachi",
@@ -14,9 +18,9 @@ const movie: Movie = {
     id: 1,
     name: "Comédia",
   },
-};
+};*/
 
-const MovieCard = () => {
+const MovieCard = ( { movie }: Props ) => {
   return (
     <div className="movie-card base-card">
       <div className="movie-card-img-container">

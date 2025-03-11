@@ -36,17 +36,16 @@
 
 @media (min-width: 768px) {
     .movie-card {
-        min-width: 324px;
-        min-height: 364px;
+        width: 324px;
+        height: 364px;
         margin-bottom: 40px;
     }
 }
 
 @media (min-width: 1200px) {
     .movie-card {
-        min-width: 258px;
-        min-height: 300px;
-        margin-bottom: 50px;
+        width: 258px;
+        height: 300px;
     
     }
 
