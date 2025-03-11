@@ -18,8 +18,18 @@
   margin-left: 10px;
 }
 
-.pagination-item.active {
+.pagination-item-active {
   background-color: #ffc700;
+}
+
+.arrow-previous {
+  color: #ffc700;
+}
+
+.arrow-next {
+  color: #ffc700;
+  transform: rotate(-180deg);
+  margin-left: 10px;
 }
 
 .arrow-inactive {
@@ -27,11 +37,7 @@
 }
 
 .arrow-active {
-    color: #ffc700;
-  }
-
-.arrow-next {
-  transform: rotate(-180deg);
-  margin-left: 10px;
+  color: #ffc700;
 }
+
 
