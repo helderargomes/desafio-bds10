@@ -11,16 +11,24 @@ import { BASE_URL, requestBackend } from "utils/requests";
 const Movies = () => {
   const [movies, setMovies] = useState<SpringPage<Movie>>();
 
-  useEffect(() => {
+  const getMovies = (pageNumber: number) => {
     const params: AxiosRequestConfig = {
       method: "GET",
       url: `${BASE_URL}/movies/`,
+      params: {
+        page: pageNumber,
+        size: 4,
+      },
       withCredentials: true,
     };
 
     requestBackend(params).then((response) => {
       setMovies(response.data);
     });
+  };
+
+  useEffect(() => {
+    getMovies(0);
   }, []);
 
   return (
@@ -41,7 +49,11 @@ const Movies = () => {
       </div>
 
       <div className="row movie-pagination-container">
-        <Pagination />
+        <Pagination
+          pageCount={movies ? movies.totalPages : 0}
+          pageRangeDisplayed={3}
+          onChange={getMovies}
+        />
       </div>
     </div>
   );
