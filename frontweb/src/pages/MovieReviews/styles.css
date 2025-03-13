@@ -1,38 +1,59 @@
-
 .home-review-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 17px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 17px 10px;
 }
 
 .home-review-container h1 {
-    font-size: 24px;
-    letter-spacing: -0.015;
+  font-size: 24px;
+  letter-spacing: -0.015;
 }
 
 .comment-form-card {
-    margin: 18px 0px;
+  margin: 18px 0px;
 }
 
 .review-list-container {
-    padding: 17px 10px 14px 10px;
+  padding: 17px 10px 14px 10px;
 }
 
-@Media (min-width: 1200px) {
-    .home-review-container {
-        padding: 40px;
-    }
+.movie-card {
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
-    .home-review-container h1 {
-        font-size: 48px;
-    }
+.card-info-container {
+    padding: 0;
+}
 
-    .comment-form-card {
-        margin: 29px 0px;
-    }
+.movie-card-review-page.card-synopsis-container {
+  display: flex;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 13px 9px;
+}
 
-    .review-list-container {
-        padding: 10px 20px 13px 17px;
-    }
+.card-synopsis-container p {
+    color: #9e9e9e;
+    text-align: justify;
+    font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  .home-review-container {
+    padding: 40px;
+  }
+
+  .home-review-container h1 {
+    font-size: 48px;
+  }
+
+  .comment-form-card {
+    margin: 29px 0px;
+  }
+
+  .review-list-container {
+    padding: 10px 20px 13px 17px;
+  }
 }

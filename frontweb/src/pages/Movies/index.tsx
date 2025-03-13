@@ -8,6 +8,8 @@ import { Movie } from "types/movie";
 import { AxiosRequestConfig } from "axios";
 import { BASE_URL, requestBackend } from "utils/requests";
 import { Genre } from "types/genre";
+import { Link } from "react-router-dom";
+
 
 type ControlComponentsData = {
   activePage: Number;
@@ -36,7 +38,6 @@ const Movies = () => {
       setMovies(response.data);
     });
   }, [controlComponentsData]);
-  
 
   useEffect(() => {
     getMovies();
@@ -45,14 +46,14 @@ const Movies = () => {
   const handleSubmitFilter = (genre: Genre) => {
     setControlComponentsData({
       activePage: 0,
-      genre: genre
+      genre: genre,
     });
   };
 
   const handlePageChange = (pageNumber: Number) => {
     setControlComponentsData({
       activePage: pageNumber,
-      genre: controlComponentsData.genre
+      genre: controlComponentsData.genre,
     });
   };
 
@@ -68,7 +69,9 @@ const Movies = () => {
             key={movie.id}
             className="col-sm-6 col-xl-3 movie-card-container"
           >
-            <MovieCard movie={movie} />
+            <Link to={`/movies/${movie.id}`}>
+              <MovieCard movie={movie} />
+            </Link>
           </div>
         ))}
       </div>
