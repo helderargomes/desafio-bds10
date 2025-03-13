@@ -66,7 +66,7 @@ const MovieReviews = () => {
           />
         </div>
       )}
-      <div>
+      <div className="review-container">
         {reviews?.map((movieReview) => (
           <ul className="list-unstyled base-card review-list-container">
             <li key={movieReview.id}>
