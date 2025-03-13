@@ -3,6 +3,7 @@ import "./styles.css";
 import { postReviewBackend } from "utils/requests";
 import { useState } from "react";
 import { MovieReview } from "types/movieReview";
+import { toast } from "react-toastify";
 
 type ReviewData = {
   text: string;
@@ -29,10 +30,10 @@ const ReviewForm = ({currentMovieId, onInsertReview} : Props) => {
     postReviewBackend(reviewData, currentMovieId).then(response => {
       setValue("text", "");
       onInsertReview(response.data);
-      console.log("SUCESSO AO SALVAR", response);
+      toast.info("Comentário salvo com sucesso!")
     })
     .catch(error => {
-      console.log("ERRO AO SALVAR", error);
+      toast.error("Erro ao salvar o comentário.")
     });
     };
 
