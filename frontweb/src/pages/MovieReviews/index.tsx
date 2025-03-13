@@ -66,13 +66,15 @@ const MovieReviews = () => {
           />
         </div>
       )}
-      <div className="review-container">
+      <div className="review-container base-card ">
         {reviews?.map((movieReview) => (
-          <ul className="list-unstyled base-card review-list-container">
-            <li key={movieReview.id}>
-              <Review review={movieReview} />
-            </li>
-          </ul>
+          <div className="review-list-container">
+            <ul>
+              <li key={movieReview.id}>
+                <Review review={movieReview} />
+              </li>
+            </ul>
+          </div>
         ))}
       </div>
     </div>

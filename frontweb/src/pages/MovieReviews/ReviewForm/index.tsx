@@ -54,7 +54,7 @@ const ReviewForm = ({currentMovieId, onInsertReview} : Props) => {
         </div>
         <div className="invalid-feedback d-block">{errors.text?.message}</div>
         <div className="comment-submit">
-          <button className="bg-primary btn">Salvar Avaliação</button>
+          <button className="bg-primary btn">SALVAR AVALIAÇÃO</button>
         </div>
       </form>
     </div>

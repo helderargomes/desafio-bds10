@@ -23,9 +23,32 @@
   height: 50px;
 }
 
+@media (min-width: 576px) {
+  .comment-card {
+    padding: 20px;
+  }
+
+  .comment-submit button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .comment-card {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .comment-card button {
+    width: 400px;
+    margin-top: 26px;
+  }
+}
+
 @media (min-width: 1200px) {
   .comment-card {
-    padding: 24px 33px 24px 17px;
+    padding: 40px;
     align-items: center;
     justify-content: center;
   }
@@ -46,5 +69,6 @@
   .comment-card button {
     width: 334px;
     font-size: 20px;
+    margin-top: 10px;
   }
 }

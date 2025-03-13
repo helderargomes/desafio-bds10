@@ -53,6 +53,28 @@
   color: #9e9e9e;
 }
 
+@media (min-width: 576px) {
+  .home-review-container {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-review-container {
+    padding: 40px;
+  }
+
+  .movie-card-review-page .movie-card {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+  }
+
+  .review-list-container {
+    padding: 40px;
+  }
+}
+
 @media (min-width: 1200px) {
   .home-review-container {
     padding: 40px;
@@ -60,6 +82,40 @@
 
   .home-review-container h1 {
     font-size: 48px;
+  }
+
+  .movie-card-review-page .movie-card {
+    display: flex;
+    height: 100%;
+  }
+
+  .movie-card-review-page .movie-card-left-container {
+    margin-left: 40px;
+  }
+
+  .movie-card-review-page .movie-card-img-container img {
+    width: 500px;
+    height: 315px;
+  }
+
+  .movie-card-review-page .card-info-container h1 {
+    font-size: 36px;
+  }
+
+  .movie-card-review-page .card-info-container h4 {
+    font-size: 24px;
+  }
+
+  .movie-card-review-page .card-info-container p {
+    font-size: 24px;
+  }
+
+  .movie-card-review-page .card-synopsis-container {
+    width: 500px;
+  }
+
+  .movie-card-review-page .card-synopsis-container p {
+    font-size: 18px;
   }
 
   .comment-form-card {
