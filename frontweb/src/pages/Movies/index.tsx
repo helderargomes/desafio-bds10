@@ -2,22 +2,32 @@ import Pagination from "components/Pagination";
 import "./styles.css";
 import MovieCard from "components/MovieCard";
 import MovieCategoryFilter from "components/MovieGenreFilter";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { SpringPage } from "types/vendor/spring";
 import { Movie } from "types/movie";
 import { AxiosRequestConfig } from "axios";
 import { BASE_URL, requestBackend } from "utils/requests";
+import { Genre } from "types/genre";
+
+type ControlComponentsData = {
+  activePage: Number;
+  genre: Genre | null;
+};
 
 const Movies = () => {
   const [movies, setMovies] = useState<SpringPage<Movie>>();
 
-  const getMovies = (pageNumber: number) => {
+  const [controlComponentsData, setControlComponentsData] =
+    useState<ControlComponentsData>({ activePage: 0, genre: null });
+
+  const getMovies = useCallback(() => {
     const params: AxiosRequestConfig = {
       method: "GET",
       url: `${BASE_URL}/movies/`,
       params: {
-        page: pageNumber,
+        page: controlComponentsData.activePage,
         size: 4,
+        genreId: controlComponentsData.genre?.id,
       },
       withCredentials: true,
     };
@@ -25,16 +35,31 @@ const Movies = () => {
     requestBackend(params).then((response) => {
       setMovies(response.data);
     });
-  };
+  }, [controlComponentsData]);
+  
 
   useEffect(() => {
-    getMovies(0);
-  }, []);
+    getMovies();
+  }, [getMovies]);
+
+  const handleSubmitFilter = (genre: Genre) => {
+    setControlComponentsData({
+      activePage: 0,
+      genre: genre
+    });
+  };
+
+  const handlePageChange = (pageNumber: Number) => {
+    setControlComponentsData({
+      activePage: pageNumber,
+      genre: controlComponentsData.genre
+    });
+  };
 
   return (
     <div className="home-base-container movie-page-container">
       <div className="movie-filter-container">
-        <MovieCategoryFilter />
+        <MovieCategoryFilter onSubmitFilter={handleSubmitFilter} />
       </div>
 
       <div className="row card-list-container">
@@ -52,7 +77,8 @@ const Movies = () => {
         <Pagination
           pageCount={movies ? movies.totalPages : 0}
           pageRangeDisplayed={3}
-          onChange={getMovies}
+          onChange={handlePageChange}
+          forcePage={movies?.number}
         />
       </div>
     </div>

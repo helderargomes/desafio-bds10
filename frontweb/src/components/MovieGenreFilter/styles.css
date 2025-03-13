@@ -8,35 +8,35 @@
   width: 260px;
 }
 
-.movie-category-filter__control {
+.movie-category-select__control {
   background-color: #6c6c6c !important;
   height: 50px;
 }
 
-.movie-category-filter__placeholder {
+.movie-category-select__placeholder {
   font-size: 16px;
   letter-spacing: -0.015%;
   color:#ffffff !important;
 }
 
-.movie-category_filter__indicators {
+.movie-category-select__indicators {
   color: #9e9e9e !important;
 }
 
-.movie-category-filter__indicator-separator {
+.movie-category-select__indicator-separator {
   display: none;
 }
 
-.movie-category-filter__input-container {
+.movie-category-select__input-container {
   font-size: 16px;
   letter-spacing: -0.015%;
 }
 
-.movie-category-filter__menu {
+.movie-category-select__menu {
   background-color: #6c6c6c !important;
 }
 
-.movie-category-filter__single-value {
+.movie-category-select__single-value {
   color: #ffffff !important;
 }
 
