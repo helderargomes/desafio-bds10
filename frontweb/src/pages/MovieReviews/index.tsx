@@ -53,11 +53,11 @@ const MovieReviews = () => {
 
   return (
     <div className="home-review-container home-base-container">
-      {currentMovie &&
-      <div className="movie-card-review-page">
-        <MovieCard movie={currentMovie}/>
-      </div>
-      }      
+      {currentMovie && (
+        <div className="movie-card-review-page">
+          <MovieCard movie={currentMovie} />
+        </div>
+      )}
       {hasAnyRoles(["ROLE_MEMBER"]) && (
         <div className="comment-form-card">
           <ReviewForm
@@ -66,15 +66,14 @@ const MovieReviews = () => {
           />
         </div>
       )}
-
-      <div className="review-list-container base-card">
-        <ul className="list-unstyled">
-          {reviews?.map((movieReview) => (
+      <div>
+        {reviews?.map((movieReview) => (
+          <ul className="list-unstyled base-card review-list-container">
             <li key={movieReview.id}>
               <Review review={movieReview} />
             </li>
-          ))}
-        </ul>
+          </ul>
+        ))}
       </div>
     </div>
   );
